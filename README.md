@@ -1,4 +1,4 @@
-# Forest Sway Rice 🌲
+# Forest Sway Rice 
 
 A minimal forest-themed Sway setup using:
 - Sway
