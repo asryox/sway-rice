@@ -1,0 +1,63 @@
+@import "/home/asry/.cache/matugen/waybar.css";
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+}
+#clock,
+#cpu,
+#memory,
+#wireplumber,
+#workspaces,
+#custom-cmus,
+#sway-window
+#tray {
+
+    background: @surface;
+
+    color: @fg;
+
+    border-radius: 999px;
+
+    padding: 0 10px;
+
+    margin: 6px;
+    
+    border: 1px solid @pill1;
+}
+#workspaces {
+    background: @pill5;
+    border: 1px solid @pill1;
+}
+
+#clock {
+    background: @pill5;
+    border: 1px solid @pill1;
+}
+#workspaces button {
+    border-radius: 999px;
+    padding: 0 8px;
+    color: @fg;
+}
+
+#workspaces button.focused {
+    background: @pill1;
+    color: @bg;
+}
+
+#workspaces button:hover {
+    background: @pill1;
+}
+
+#cpu {
+    background: @pill5;
+    border: 1px solid @pill1;
+}
+
+#memory {
+    background: @pill5;
+    border: 1px solid @pill1;
+}

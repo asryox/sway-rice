@@ -1,0 +1,124 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+"logo": {
+  "type": "file",
+  "source": "/home/asry/ascii/tree.txt",
+  "width": 50,
+  "padding": {
+    "right": 3
+  },
+  "color": {
+    "1": "#21462c"
+  }
+},
+"display": {
+  "separator": "  ",
+  "color": {
+    "separator": "light_green",
+    "keys": "#8E6A44"
+  }
+},
+  "modules": [
+    // Title
+    {
+      "type": "title",
+      "format": "{#light_green}╭───────────── {#}{user-name-colored}"
+    },
+    // System Information
+    {
+      "type": "custom",
+      "format": "{#light_green}│ {#}System Information"
+    },
+    {
+      "type": "os",
+      "key": "{#separator}│  {#keys}󰍹 OS"
+    },
+    {
+      "type": "kernel",
+      "key": "{#separator}│  {#keys}󰒋 Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": "{#separator}│  {#keys}󰅐 Uptime"
+    },
+    {
+      "type": "packages",
+      "key": "{#separator}│  {#keys}󰏖 Packages",
+      "format": "{all}"
+    },
+    {
+      "type": "custom",
+      "format": "{#light_green}│"
+    },
+    // Desktop Environment
+    {
+      "type": "custom",
+      "format": "{#light_green}│ {#}Desktop Environment"
+    },
+    {
+      "type": "de",
+      "key": "{#separator}│  {#keys}󰧨 DE"
+    },
+    {
+      "type": "wm",
+      "key": "{#separator}│  {#keys}󱂬 WM"
+    },
+    {
+      "type": "wmtheme",
+      "key": "{#separator}│  {#keys}󰉼 Theme"
+    },
+    {
+      "type": "display",
+      "key": "{#separator}│  {#keys}󰹑 Resolution"
+    },
+    {
+      "type": "shell",
+      "key": "{#separator}│  {#keys}󰞷 Shell"
+    },
+    {
+      "type": "terminalfont",
+      "key": "{#separator}│  {#keys}󰛖 Font"
+    },
+    {
+      "type": "custom",
+      "format": "{#light_green}│"
+    },
+    // Hardware Information
+    {
+      "type": "custom",
+      "format": "{#light_green}│ {#}Hardware Information"
+    },
+    {
+      "type": "cpu",
+      "key": "{#separator}│  {#keys}󰻠 CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "{#separator}│  {#keys}󰢮 GPU"
+    },
+    {
+      "type": "memory",
+      "key": "{#separator}│  {#keys}󰍛 Memory"
+    },
+    {
+      "type": "disk",
+      "key": "{#separator}│  {#keys}󰋊 Disk (/)",
+      "folders": "/"
+    },
+    {
+      "type": "custom",
+      "format": "{#light_green}│"
+    },
+    // Colors
+    {
+      "type": "colors",
+      "key": "{#separator}│",
+      "symbol": "circle"
+    },
+    // Footer
+    {
+      "type": "custom",
+      "format": "{#light_green}╰───────────────────────────────╯"
+    }
+  ]
+}

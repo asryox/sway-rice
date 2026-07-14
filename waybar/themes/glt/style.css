@@ -1,0 +1,87 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Inter Light;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.75); /* transparency added */
+    border-bottom: 2px dashed white;
+    border-top: 2px dashed white;
+    padding-top: 5px;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* workspaces */
+#workspaces button {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: transparent;
+    color: inherit;
+    font-weight: 600;
+    border-left: 2px dashed white; /* fixed */
+}
+
+#workspaces button:first-child {
+    border-left: 0;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1); /* better contrast */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+#workspaces button.focused {
+    background: rgba(255, 255, 255, 0.1);
+
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px dashed white;
+    border-right: 2px dashed white;
+
+    color: white;
+}
+
+/* modules */
+#mpd, #pulseaudio, #network, #cpu, #memory, #temperature, #clock, #window {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    background-color: transparent; /* ← changed */
+    color: inherit;
+    font-weight: 600;
+
+    border-left: 2px dashed white;
+}
+
+/* tray */
+#tray {
+    padding-left: 8px;
+    padding-right: 8px;
+    min-width: 40px;
+    border-left: 2px dashed white; /* unified */
+    font-size: 20px;
+}
+
+#window {
+    min-width: 500px;
+}
+
+#clock {
+    font-size: 14px;
+}
+
+/* cpu spacing */
+#cpu {
+    padding-left: 10px;
+    padding-right: 10px;
+}

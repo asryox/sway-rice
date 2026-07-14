@@ -1,0 +1,97 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "height": 5,
+
+    // Modules Left
+    "modules-left": [
+        "wlr/workspaces"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "clock"
+    ],
+
+    // Modules Right
+    "modules-right": [
+        "wireplumber",
+        "cpu",
+        "memory",
+        "tray",
+        "custom/exit"
+    ],
+
+    // -----------------------------------------------
+    // Module Definitions
+    // -----------------------------------------------
+
+    "wlr/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%Y-%m-%d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+"wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": " muted",
+    "format-icons": ["", "", ""],
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
+},
+
+
+"cpu": {
+"format": "   {usage}%"
+},
+
+"memory": {
+    "format": " {percentage}%"
+},
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "custom/appmenu": {
+        "format": " Apps",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "custom/updates": {
+        "format": " {}",
+        "interval": 3600,
+        "exec": "checkupdates 2>/dev/null | wc -l",
+        "exec-if": "command -v checkupdates",
+        "on-click": "alacritty -e sudo pacman -Syu",
+        "tooltip": false
+    },
+
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+},
+"wireplumber#mic": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+        "default": "🎤",
+        "muted": "🔇"
+    },
+    "on-click": "pavucontrol"
+},

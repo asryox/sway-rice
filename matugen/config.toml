@@ -1,0 +1,9 @@
+[config]
+
+[templates.swaync]
+input_path = "~/.config/matugen/templates/swaync.css"
+output_path = "~/.cache/matugen/swaync.css"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar.css"
+output_path = "~/.cache/matugen/waybar.css"

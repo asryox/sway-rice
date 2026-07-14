@@ -1,0 +1,77 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "height": 4,
+
+    // Modules Left
+    "modules-left": [
+        "sway/workspaces",
+        "custom/cmus"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "clock",
+        "sway/window"
+    ],
+
+    // Modules Right
+    "modules-right": [
+        "wireplumber",
+        "cpu",
+        "memory",
+        "tray"
+    ],
+
+    // -----------------------------------------------
+    // Module Definitions
+    // -----------------------------------------------
+
+"sway/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{name}"
+},
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%Y-%m-%d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+"wireplumber": {
+    "format": "{icon}   {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": ["", "", ""],
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip": false
+},
+
+
+"cpu": {
+"format": "󰻠 {usage}%"
+},
+
+"memory": {
+    "format": "󰍛 {percentage}%"
+},
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+"custom/cmus": {
+    "exec": "~/.config/waybar/scripts/cmus.sh",
+    "interval": 0.9,
+    "return-type": "text",
+    "max-length": 30
+}
+
+}
